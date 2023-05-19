@@ -1,0 +1,22 @@
+{{> header}}
+
+<h1 style="text-align: center">Your feedback is valuable to us!</h1>
+
+<section class="section bg-light feedback-form" id="contact">
+    <form method="post" action="/api/feedback/">
+        <div class="mb-3">
+            <label for="name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="col-form-label">Feedback:</label>
+            <input type="text" class="form-control" id="feedback" name="feedback">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit <i class="icon-size-15 icon ms-1"
+                                                                data-feather="arrow-right-circle"></i>
+        </button>
+    </form>
+</section>
+
+
+{{> footer}}

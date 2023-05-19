@@ -1,0 +1,65 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">Add User</button>
+
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="userModalLabel">New faculty</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/api/user/">
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="imageUrl" class="col-form-label">Profile Picture Link:</label>
+                        <input type="text" class="form-control" id="imageUrl" name="imageUrl">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">First Name : </label>
+                        <input type="text" name="firstName" class="form-control" id="firstName"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Last Name : </label>
+                        <input type="text" name="lastName" class="form-control" id="lastName"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Contact Number : </label>
+                        <input type="text" name="contactNumber" class="form-control" id="contactNumber"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Description : </label>
+                        <input type="text" name="description" class="form-control" id="description"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Address : </label>
+                        <input type="text" name="address" class="form-control" id="address"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Designation : </label>
+                        <input type="text" name="designation" class="form-control" id="designation"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Website : </label>
+                        <input type="text" name="website" class="form-control" id="website"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">EMail : </label>
+                        <input type="text" name="mails" class="form-control" id="mails"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">API Key : </label>
+                        <input type="text" name="apiKey" class="form-control" id="apiKey"></input>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Submit <i class="icon-size-15 icon ms-1"
+                                                                                data-feather="arrow-right-circle"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

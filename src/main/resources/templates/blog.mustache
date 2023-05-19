@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>SERL IIIT Allahabad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!-- css -->
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="/css/materialdesignicons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar">
+    <div class="container">
+        <!-- LOGO -->
+        <a class="navbar-brand logo" href="/">
+            <img src="https://github.com/technoayan7/PRO/blob/main/images/logo-dark.png?raw=true" alt=""
+                 class="logo-dark" height="24"/>
+            <img src="https://github.com/technoayan7/PRO/blob/main/images/logo-light.png?raw=true" alt=""
+                 class="logo-light" height="24"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="mdi mdi-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto navbar-center" id="navbar-navlist">
+                <li class="nav-item">
+                    <a data-scroll href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="#About" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/faculty" class="nav-link">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/researchers" class="nav-link">Researchers</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/resources" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/team" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a data-scroll href="/contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-center">
+                <li class="nav-item">
+                    <a href="#login" class="nav-link" data-bs-toggle="modal"
+                       data-bs-target="#exampleModalCenter">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#login" class="nav-link" data-bs-toggle="modal"
+                       data-bs-target="#exampleModalCenter-1">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Hero Start -->
+<section class="hero-1-bg" style="background-image: url(static/images/hero-1-bg-img.png)" id="home">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6">
+                <h1 class="hero-1-title text-dark fw-bold text-shadow mb-4">Software Engineering Research Lab</h1>
+                <div class="w-75 mb-5 mb-lg-0">
+                    <p class="text-muted mb-5 pb-5 font-size-17">Software Engineering Research Lab is a research
+                        laboratory that focuses on investigating various aspects of software
+                        engineering.</p>
+
+                    <div class="subscribe-form">
+                        <form action="/api/subscriptions/" method="post">
+                            <input type="text" name="mail" placeholder="Enter  email...">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-10">
+                <div class=" mt-5 mt-lg-0">
+                    <img src="https://www.thegatewaydigital.com/wp-content/uploads/2020/07/Services_Enterprise-Application-Development_Custom-Software-Engineering.png"
+                         alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero End -->
+
+
+<!-- Features Start -->
+<section class="section bg-light feather-bg-img" style="background-image: url(static/images/features-bg-img.png);"
+         id="About">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center mb-5">
+                    <h3 class="title mb-3">About - SERL</h3>
+                    <p class="text-muted font-size-17">SERL@IIITA is a research lab focused on developing scalable
+                        solutions for complex software systems based on business
+                        needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="mb-4 mb-lg-0">
+                    <img src="https://cdn.dribbble.com/users/508588/screenshots/11263679/thg_m78_05_4x.jpg" alt=""
+                         class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <!-- <p class="font-weight-medium text-uppercase mb-2"><i
+                        class="mdi mdi-chart-bubble h2 text-primary me-1 align-middle"></i> Creative Features</p> -->
+                <h3 class="font-weight-semibold line-height-1_4 mb-4">About <b>Software Engineering Research Lab</b>
+                </h3>
+                <p class="text-muted font-size-17 mb-4">The (SERL) at IIIT Allahabad will conduct research on
+                    designing complex, large-scale
+                    software systems that meet business needs. The lab will cover various research domains and
+                    address industrial software
+                    engineering challenges. Collaboration with industry experts will ensure solutions are thoroughly
+                    evaluated for
+                    real-world applications. The lab will provide a platform for researchers and students to
+                    showcase their potential
+                    globally.</p>
+                <!-- <p class="text-muted mb-2"><i class="icon-xs me-1" data-feather="layout"></i> Donec pede justo
+                    fringilla vel nec.</p>
+                <p class="text-muted"><i class="icon-xs me-1" data-feather="life-buoy"></i> Cras ultricies mi eu
+                    turpis hendrerit fringilla.</p>
+                <div class="mt-5">
+                    <a href="#" class="btn btn-primary me-2">Read More</a>
+                    <a href="#" class="btn btn-soft-primary">Buy Now</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section feather-bg-img" style="background-image: url(static/images/features-bg-img-1.png)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center mb-5">
+                    <h3 class="title mb-3">About - Mission & Vision</h3>
+                    <p class="text-muted font-size-17">
+                        "Big thinking precedes great achievement."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+                <!-- <p class="font-weight-medium text-uppercase mb-2"><i
+                            class="mdi mdi-chart-bubble h2 text-primary me-1 align-middle"></i> Creative Features</p> -->
+                <h3 class="font-weight-semibold line-height-1_4 mb-4">About <b>Mission</b> & <b>Vision</b></b>
+                </h3>
+                <p class="text-muted font-size-18 mb-4">The mission of this initiative is to establish a research
+                    lab of an industrial repute through various scholarly
+                    activities such as development of software tools, establishment of special interest groups,
+                    organizing conferences,
+                    workshops, forums for open source solutions and hands-on training in order to provide reliable
+                    and repeatable results to
+                    reflect our core strategy and vision of deepening excellence.</p>
+                <!-- <p class="text-muted mb-2"><i class="icon-xs me-1" data-feather="layout"></i> Donec pede justo
+                        fringilla vel nec.</p>
+                    <p class="text-muted"><i class="icon-xs me-1" data-feather="life-buoy"></i> Cras ultricies mi eu
+                        turpis hendrerit fringilla.</p>
+                    <div class="mt-5">
+                        <a href="#" class="btn btn-primary me-2">Read More</a>
+                        <a href="#" class="btn btn-soft-primary">Buy Now</a>
+                    </div> -->
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="mb-4 mb-lg-0">
+                    <img src="https://blog.imarticus.org/wp-content/uploads/2021/12/bwgg.gif" alt=""
+                         class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Blog start -->
+<!-- <section class="section" id="blog">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center mb-5">
+                    <h3 class="title mb-3">Latest News</h3>
+                    <p class="text-muted font-size-15">Et harum quidem rerum facilis est et expedita distinctio nam
+                        libero tempore cum soluta nobis eligendi cumque.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 mycard">
+                <div class="blog-box mb-4 mb-lg-0">
+                    <img src="images/blog/img-1.jpg" alt="" class="img-fluid d-block mx-auto rounded">
+                    <p class="text-dark fw-bold h5">Ayan Ahmad</p>
+                    <p class="text-muted font-size-15">Address:
+                        Room No.: 5203,
+                        CC3 Building
+                        Indian Institute of Information Technology
+                        Devghat Jhalwa
+                        Allahabad (UP) INDIA
+
+                        Contact No:
+                        Phone: 0532-2922424
+                        Web: www.sonaliagarwal.com
+
+                        E Mail: sonali@iiita.ac.in
+                        raiagarwalsonali@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-lg-4  mycard">
+                <div class="blog-box blog-box mb-4 mb-lg-0">
+                    <img src="images/blog/img-2.jpg" alt="" class="img-fluid d-block mx-auto rounded">
+                    <ul class="list-inline text-muted text-uppercase font-size-15 font-weight-medium mt-3 mb-2">
+                        <li class="list-inline-item me-3"><i class="icon-size-15 icon me-1"
+                                data-feather="calendar"></i> April 11 2020</li>
+                        <li class="list-inline-item"><i class="icon-size-15 icon me-1" data-feather="user"></i>
+                            Admin
+                        </li>
+                    </ul>
+                    <a href="#" class="text-dark fw-bold h5">Private Meeting Room</a>
+                    <p class="text-muted font-size-15">Integer ante arcu accumsan a consectetuer eget posuere mauris
+                        praesent adipiscing phasellus ullamcorper ipsum rutrum punc.</p>
+                </div>
+            </div>
+            <div class="col-lg-4  mycard">
+                <div class="blog-box blog-box mb-4 mb-lg-0">
+                    <img src="images/blog/img-3.jpg" alt="" class="img-fluid d-block mx-auto rounded">
+                    <ul class="list-inline text-muted text-uppercase font-size-15 font-weight-medium mt-3 mb-2">
+                        <li class="list-inline-item me-3"><i class="icon-size-15 icon me-1"
+                                data-feather="calendar"></i> April 12 2020</li>
+                        <li class="list-inline-item"><i class="icon-size-15 icon me-1" data-feather="user"></i>
+                            Admin
+                        </li>
+                    </ul>
+                    <a href="#" class="text-dark fw-bold h5">The Best Business Ideas</a>
+                    <p class="text-muted font-size-15">Integer ante arcu accumsan a consectetuer eget posuere mauris
+                        praesent adipiscing phasellus ullamcorper ipsum rutrum punc.</p>
+                </div>
+            </div>
+            <div class="col-lg-4  mycard">
+                <div class="blog-box mb-4 mb-lg-0">
+                    <img src="images/blog/img-3.jpg" alt="" class="img-fluid d-block mx-auto rounded">
+                    <ul class="list-inline text-muted text-uppercase font-size-15 font-weight-medium mt-3 mb-2">
+                        <li class="list-inline-item me-3"><i class="icon-size-15 icon me-1"
+                                data-feather="calendar"></i> April 12
+                            2020</li>
+                        <li class="list-inline-item"><i class="icon-size-15 icon me-1" data-feather="user"></i>
+                            Admin
+                        </li>
+                    </ul>
+                    <a href="#" class="text-dark fw-bold h5">The Best Business Ideas</a>
+                    <p class="text-muted font-size-15">Integer ante arcu accumsan a consectetuer eget posuere mauris
+                        praesent adipiscing phasellus ullamcorper ipsum rutrum punc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- Blog End -->
+
+
+<!-- Footer Start -->
+<section class="footer" style="background-image: url(static/images/footer-bg.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="mb-5">
+                    <img src="/images/logo-light.png" alt="" class="" height="24">
+                    <p class="text-white-50 my-4 font-size-15">Software Engineering Research Lab, IIIT Allahabad</p>
+                    <ul class="list-inline footer-social-icon-content">
+                        <li class="list-inline-item me-4"><a href="#" class="footer-social-icon"><i class=""
+                                                                                                    data-feather="facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item me-4"><a href="#" class="footer-social-icon"><i class=""
+                                                                                                    data-feather="twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item me-4"><a href="#" class="footer-social-icon"><i class=""
+                                                                                                    data-feather="instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="footer-social-icon"><i class=""
+                                                                                               data-feather="linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7 offset-lg-1">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6 class="text-white text-uppercase mb-4">About Us</h6>
+                        <ul class="list-unstyled footer-sub-menu">
+                            <li><a href="#" class="footer-link">Works</a></li>
+                            <li><a href="#" class="footer-link">Strategy</a></li>
+                            <li><a href="#" class="footer-link">Releases</a></li>
+                            <li><a href="#" class="footer-link">Press</a></li>
+                            <li><a href="#" class="footer-link">Mission</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-white text-uppercase mb-3">Customers</h6>
+                        <ul class="list-unstyled footer-sub-menu">
+                            <li><a href="#" class="footer-link">Tranding</a></li>
+                            <li><a href="#" class="footer-link">Popular</a></li>
+                            <li><a href="#" class="footer-link">Customers</a></li>
+                            <li><a href="#" class="footer-link">Features</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-white text-uppercase mb-3">Support</h6>
+                        <ul class="list-unstyled footer-sub-menu">
+                            <li><a href="#" class="footer-link">Developers</a></li>
+                            <li><a href="#" class="footer-link">Support</a></li>
+                            <li><a href="#" class="footer-link">Customer Service</a></li>
+                            <li><a href="#" class="footer-link">Get Started</a></li>
+                            <li><a href="#" class="footer-link">Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer End -->
+
+<!-- login Modal Start -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content login-page">
+            <div class="modal-body">
+                <div class="text-center">
+                    <h3 class="title mb-4">Welcome To SERL</h3>
+                    <h4 class="text-uppercase text-primary"><b>Login</b></h4>
+                </div>
+                <div class="login-form mt-4">
+                    <form action="/api/user/" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username / Email</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="Youremail@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <a href="#" class="float-end text-muted font-size-15">Forgot Password.?</a>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label font-size-15" for="customCheck1">Remember Me</label>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Login <i class="icon-size-15 icon ms-1"
+                                                                                   data-feather="arrow-right-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="position-relative text-center mt-4">
+                        <span class="login-border"></span>
+                        <p class="social-login text-muted font-size-17">Social Login</p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-primary"><i
+                                    class="icon-xs" data-feather="facebook"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-info"><i
+                                    class="icon-xs" data-feather="twitter"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-danger"><i
+                                    class="icon-xs" data-feather="instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="login-social-icon icon-success"><i
+                                    class="icon-xs" data-feather="linkedin"></i></a></li>
+                        </ul>
+                        <p class="text-muted mb-0">New User? <a href="#" class="text-primary">Signup</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login Modal End -->
+
+<!-- Register Modal Start-->
+<div class="modal fade" id="exampleModalCenter-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content login-page">
+            <div class="modal-body">
+                <div class="text-center">
+                    <h3 class="title mb-4">Welcome To SERL</h3>
+                    <h4 class="text-uppercase text-primary"><b>Register</b></h4>
+                </div>
+                <div class="login-form mt-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputUsername">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputUsername"
+                                   placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2"
+                                   placeholder="Youremail@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                   placeholder="Password">
+                        </div>
+                        <a href="#" class="float-end text-muted font-size-15">Forgot Password.?</a>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label font-size-15" for="customCheck2">Remember Me</label>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Register <i class="icon-size-15 icon ms-1"
+                                                                                      data-feather="arrow-right-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="position-relative text-center mt-4">
+                        <span class="login-border"></span>
+                        <p class="social-login text-muted font-size-17">Social Login</p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-primary"><i
+                                    class="icon-xs" data-feather="facebook"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-info"><i
+                                    class="icon-xs" data-feather="twitter"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-danger"><i
+                                    class="icon-xs" data-feather="instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="login-social-icon icon-success"><i
+                                    class="icon-xs" data-feather="linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register Modal Start-->
+
+
+<!-- javascript -->
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/smooth-scroll.polyfills.min.js"></script>
+<script src="/js/gumshoe.polyfills.min.js"></script>
+<!-- feather icon -->
+<script src="/js/feather.js"></script>
+<!-- unicons icon -->
+<script src="/js/unicons.js"></script>
+<!-- Main Js -->
+<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.blog-slider', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        mousewheel: {
+            invert: false,
+        },
+        // autoHeight: true,
+        pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
+        }
+    });
+</script>
+
+</body>
+
+</html>

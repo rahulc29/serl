@@ -1,0 +1,197 @@
+{{> header}}
+<!-- Faculty Start -->
+{{> add-user}}
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#facultyModal">Add User</button>-->
+
+<!--<div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="facultyModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h1 class="modal-title fs-5" id="facultyModalLabel">New faculty</h1>-->
+<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <form method="post" action="/api/user/">-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="username" class="col-form-label">Username:</label>-->
+<!--                        <input type="text" class="form-control" id="username" name="username">-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="imageUrl" class="col-form-label">Profile Picture Link:</label>-->
+<!--                        <input type="text" class="form-control" id="imageUrl" name="imageUrl">-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">First Name : </label>-->
+<!--                        <input type="text" name="firstName" class="form-control" id="firstName"></input>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">Last Name : </label>-->
+<!--                        <input type="text" name="lastName" class="form-control" id="lastName"></input>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">Contact Number : </label>-->
+<!--                        <input type="text" name="contactNumber" class="form-control" id="contactNumber"></input>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">Description : </label>-->
+<!--                        <input type="text" name="description" class="form-control" id="description"></input>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">Address : </label>-->
+<!--                        <input type="text" name="address" class="form-control" id="address"></input>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="message-text" class="col-form-label">Designation : </label>-->
+<!--                        <input type="text" name="designation" class="form-control" id="designation">faculty</input>-->
+<!--                    </div>-->
+<!--                    <div class="text-center mt-4">-->
+<!--                        <button type="submit" class="btn btn-primary">Submit <i class="icon-size-15 icon ms-1"-->
+<!--                                                                               data-feather="arrow-right-circle"></i>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Submit</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<section class="section bg-light" id="Faculty">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center mb-5">
+                    <h3 class="title mb-3">Faculty</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            {{# faculties}}
+                <div class="col-lg-4">
+                    <div class="pricing-box rounded text-center p-4">
+                        <div class="pricing-icon-bg my-3">
+                            <img src="{{imageUrl}}" alt="Profile Picture"
+                                 class="img-fluid d-block mx-auto rounded-circle" style="width: 200px; height: 200px;">
+                        </div>
+                        <h4 class="title mb-3">{{firstName}} {{lastName}}</h4>
+                        <p class="text-muted font-weight-semibold">{{description}}</p>
+                        <ul class="list-unstyled pricing-item mb-4">
+                            <li class="text-muted"><span style="font-weight: bold;">Address:</span> <br>
+                                {{address}}
+                            </li>
+                            <li class="text-muted"><span style="font-weight: bold;">Contact No:</span>
+                                {{contactNumber}} <br>
+                                <span style="font-weight: bold;">Web:</span> {{website}}
+                            </li>
+                            <li class="text-muted"><span style="font-weight: bold;">E Mail:</span>
+                                {{mails}}</li>
+                        </ul>
+                        <div class="mt-4">
+                            <div class="hero-bottom-img">
+                                <img src="images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/faculties}}
+            <div class="col-lg-4">
+                <div class="pricing-box rounded text-center p-4">
+                    <div class="pricing-icon-bg my-3">
+                        <img src="https://serl.iiita.ac.in/Profile/sonali.jpg" alt="Profile Picture"
+                             class="img-fluid d-block mx-auto rounded-circle" style="width: 200px; height: 200px;">
+                    </div>
+                    <h4 class="title mb-3">Dr. Sonali Agarwal</h4>
+                    <p class="text-muted font-weight-semibold">Assistant Professor
+                        IIIT Allahabad</p>
+                    <ul class="list-unstyled pricing-item mb-4">
+                        <li class="text-muted"><span style="font-weight: bold;">Address:</span> <br>
+                            Room No: 5203, CC3 Building <br>
+                            Indian Institute of Information Technology
+                            Devghat Jhalwa
+                            Allahabad (UP) INDIA
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">Contact No:</span> <br>
+                            <span style="font-weight: bold;">Web:</span> www.sonaliagarwal.com
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">E Mail:</span>
+                            sonali@iiita.ac.in <br>
+                            raiagarwalsonali@gmail.com</li>
+                    </ul>
+                    <div class="mt-4">
+                        <div class="hero-bottom-img">
+                            <img src="images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-box rounded text-center p-4">
+                    <div class="pricing-icon-bg my-3">
+                        <img src="https://serl.iiita.ac.in/Profile/akki.channappa.jpg" alt="Profile Picture"
+                             class="img-fluid d-block mx-auto rounded-circle" style="width: 200px; height: 200px;">
+                    </div>
+                    <h4 class="title mb-3">Prof. Channappa B Akki</h4>
+                    <p class="text-muted font-weight-semibold">Professor
+                        IIIT Allahabad</p>
+                    <ul class="list-unstyled pricing-item mb-4">
+                        <li class="text-muted"><span style="font-weight: bold;">Address:</span> <br>
+                            Indian Institute of Information Technology - Allahabad
+                            Devghat, Jhalwa,
+                            Allahabad 211 015, (UP) INDIA
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">Contact No:</span>
+                            +91-532-2922161 <br>
+                            +91-8197277253 (M)
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">E Mail:</span>
+                            akki.channappa@iiita.ac.in <br>
+                            akki.channappa@gmail.com</li>
+                    </ul>
+                    <div class="mt-4">
+                        <div class="hero-bottom-img">
+                            <img src="images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-box rounded text-center p-4">
+                    <div class="pricing-icon-bg my-3">
+                        <img src="https://serl.iiita.ac.in/Profile/image003.jpg" alt="Profile Picture"
+                             class="img-fluid d-block mx-auto rounded-circle" style="width: 200px; height: 200px;">
+                    </div>
+                    <h4 class="title mb-3">Dr. Vrijendra Singh</h4>
+                    <p class="text-muted font-weight-semibold">HOD IT
+                        IIIT Allahabad</p>
+                    <ul class="list-unstyled pricing-item mb-4">
+                        <li class="text-muted"><span style="font-weight: bold;">Address:</span> <br>
+                            Computer Center- 3,
+                            Indian Institute of Information Technology Allahabad,
+                            Deoghat, Jhalwa,
+                            Allahabad (India)
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">Contact No:</span>
+                            Office : +91-532-2922092 <br>
+                            Residence : +91-532-2922611 <br>
+                            Mobile : +91-737-6581984
+                        </li>
+                        <li class="text-muted"><span style="font-weight: bold;">E Mail:</span>
+                            vrijendra.singh@gmail.com <br>
+                            vrij@iiita.ac.in</li>
+                    </ul>
+                    <div class="mt-4">
+                        <div class="hero-bottom-img">
+                            <img src="images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Faculty End -->
+{{> footer}}

@@ -1,0 +1,178 @@
+<!-- Footer Start -->
+<section class="footer" style="background-image: url(static/images/footer-bg.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="mb-5">
+                    <img src="/images/logo-light.png" alt="" class="" height="24">
+                    <p class="text-white-50 my-4 font-size-15">Software Engineering Research Lab, IIIT Allahabad</p>
+                    <ul class="list-inline footer-social-icon-content"></ul>
+                </div>
+            </div>
+            <div class="col-lg-7 offset-lg-1">
+                <div class="row">
+                    <div class="col-md-4" style="text-align: center">
+                        <h6 class="text-white text-uppercase mb-4">About Us</h6>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <iframe width="50%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMczzKq3MmjkRdVL_JWxLjvY&amp;key=AIzaSyDCGQnldzsNTO7HzZo-B2W_9tMgbBGqaVo" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer End -->
+
+<!-- login Modal Start -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content login-page">
+            <div class="modal-body">
+                <div class="text-center">
+                    <h3 class="title mb-4">Welcome To SERL</h3>
+                    <h4 class="text-uppercase text-primary"><b>Login</b></h4>
+                </div>
+                <div class="login-form mt-4">
+                    <form action="/api/user/" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username / Email</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="Youremail@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <a href="#" class="float-end text-muted font-size-15">Forgot Password.?</a>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label font-size-15" for="customCheck1">Remember Me</label>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Login <i class="icon-size-15 icon ms-1"
+                                                                                   data-feather="arrow-right-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="position-relative text-center mt-4">
+                        <span class="login-border"></span>
+                        <p class="social-login text-muted font-size-17">Social Login</p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-primary"><i
+                                    class="icon-xs" data-feather="facebook"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-info"><i
+                                    class="icon-xs" data-feather="twitter"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-danger"><i
+                                    class="icon-xs" data-feather="instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="login-social-icon icon-success"><i
+                                    class="icon-xs" data-feather="linkedin"></i></a></li>
+                        </ul>
+                        <p class="text-muted mb-0">New User? <a href="#" class="text-primary">Signup</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login Modal End -->
+
+<!-- Register Modal Start-->
+<div class="modal fade" id="exampleModalCenter-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content login-page">
+            <div class="modal-body">
+                <div class="text-center">
+                    <h3 class="title mb-4">Welcome To SERL</h3>
+                    <h4 class="text-uppercase text-primary"><b>Register</b></h4>
+                </div>
+                <div class="login-form mt-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputUsername">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputUsername"
+                                   placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2"
+                                   placeholder="Youremail@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                   placeholder="Password">
+                        </div>
+                        <a href="#" class="float-end text-muted font-size-15">Forgot Password.?</a>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label font-size-15" for="customCheck2">Remember Me</label>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Register <i class="icon-size-15 icon ms-1"
+                                                                                      data-feather="arrow-right-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="position-relative text-center mt-4">
+                        <span class="login-border"></span>
+                        <p class="social-login text-muted font-size-17">Social Login</p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-primary"><i
+                                    class="icon-xs" data-feather="facebook"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-info"><i
+                                    class="icon-xs" data-feather="twitter"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-danger"><i
+                                    class="icon-xs" data-feather="instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="login-social-icon icon-success"><i
+                                    class="icon-xs" data-feather="linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register Modal Start-->
+
+
+<!-- javascript -->
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/smooth-scroll.polyfills.min.js"></script>
+<script src="/js/gumshoe.polyfills.min.js"></script>
+<!-- feather icon -->
+<script src="/js/feather.js"></script>
+<!-- unicons icon -->
+<script src="/js/unicons.js"></script>
+<!-- Main Js -->
+<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.blog-slider', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        mousewheel: {
+            invert: false,
+        },
+        // autoHeight: true,
+        pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
+        }
+    });
+</script>
+
+</body>
+
+</html>
