@@ -3,6 +3,7 @@ package com.example.blog
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus
+import org.springframework.http.HttpStatusCode
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -30,22 +31,28 @@ class UserController(
     private val userRepository: UserRepository,
     private val publicationsRepository: PublicationsRepository,
     @Value("\${api.key}") private val apiKey: String,
+    @Value("\${admin.session.id}") private val adminSessionId : String,
 ) {
     @GetMapping("/")
     fun findAll(): Iterable<User> = userRepository.findAll()
 
     @PostMapping(path = ["/"], consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE])
     fun postUser(userDto: UserHttpPostRequestDto): RedirectView {
-        if (userDto.apiKey != apiKey) {
-            throw ResponseStatusException(HttpStatus.FORBIDDEN, "Invalid API Key")
-        }
         val publications = userDto.publications.map { publicationsRepository.findByIdOrNull(it) }
         userRepository.save(fromHttpPostDto(userDto, publications.toMutableList()))
         return when (userDto.designation) {
-            "faculty" -> RedirectView("/faculty")
-            "researcher" -> RedirectView("/researchers")
+            "faculty" -> RedirectView("/admin/console/${adminSessionId}")
+            "researcher" -> RedirectView("/admin/console/${adminSessionId}")
             else -> throw ResponseStatusException(HttpStatus.BAD_REQUEST, "Designation should be \"faculty\" or \"researcher\"")
         }
+    }
+
+    @PostMapping(path = ["/login"], consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE])
+    fun loginAdmin(adminLoginDto: AdminLoginDto): RedirectView {
+        if (adminLoginDto.username == "admin" && (adminLoginDto.password == null || adminLoginDto.password == "admin" )) {
+            return RedirectView("/admin/console/${adminSessionId}")
+        }
+        return RedirectView("/admin/console/error")
     }
 
     private fun fromHttpPostDto(userDto: UserHttpPostRequestDto, publications: MutableList<Publication?>): User = User(
@@ -70,11 +77,17 @@ class UserController(
     fun findFaculties() = userRepository.findAllByDesignation("faculty").map { it.toHttpGetResponseDto() }
 }
 
+class AdminLoginDto(
+    var username: String,
+    var password: String? = null,
+)
+
 @RestController
 @RequestMapping("/api/publications")
 class PublicationsController(
     private val publicationsRepository: PublicationsRepository,
-    private val userRepository: UserRepository
+    private val userRepository: UserRepository,
+    @Value("\${admin.session.id}") private val adminSessionId : String,
 ) {
     @GetMapping("/{authorUsername}")
     fun findByAuthorName(@PathVariable authorUsername: String): List<PublicationHttpGetResponseDto> =
@@ -92,7 +105,7 @@ class PublicationsController(
         val publication = requestDto.toEntity(author)
         author.publications.add(publication)
         publicationsRepository.save(publication)
-        return RedirectView("/publications")
+        return RedirectView("/admin/console/${adminSessionId}")
     }
 }
 

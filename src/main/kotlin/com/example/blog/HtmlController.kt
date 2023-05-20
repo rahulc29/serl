@@ -1,5 +1,6 @@
 package com.example.blog
 
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Controller
 import org.springframework.ui.*
@@ -13,7 +14,10 @@ import java.time.format.DateTimeFormatter
 class HtmlController(
     private val articleRepository: ArticleRepository,
     private val userRepository: UserRepository,
-    private val publicationsRepository: PublicationsRepository
+    private val publicationsRepository: PublicationsRepository,
+    private val subscriptionRepository: SubscriptionRepository,
+    private val feedbackRepository: FeedbackRepository,
+    @Value("\${admin.session.id}") private val sessionId: String
 ) {
     @GetMapping("/")
     fun blog(model: Model): String {
@@ -44,7 +48,7 @@ class HtmlController(
     fun publications(model: Model): String {
         val publications = publicationsRepository.findAll()
         model["title"] = "Publications - SERL IIITA"
-        model["publications"] = publications.map { it.render() }
+        model["publications"] = publications.mapIndexed { index, publication -> publication.render(index + 1) }
         return "publications"
     }
 
@@ -53,7 +57,7 @@ class HtmlController(
         val publications = publicationsRepository.findAllByAuthorUsername(authorUsername)
         val author = userRepository.findByUsername(authorUsername)
         model["title"] = "Publications by ${author?.firstName} ${author?.lastName}"
-        model["publications"] = publications.map { it.render() }
+        model["publications"] = publications.mapIndexed { index, publication -> publication.render(index + 1) }
         return "publications"
     }
 
@@ -76,9 +80,25 @@ class HtmlController(
         model["title"] = "Contact Us - SERL IIITA"
         return "contact"
     }
+
+    @GetMapping("/admin/console/{sessionId}")
+    fun admin(model: Model, @PathVariable sessionId: String): String {
+        return if (sessionId == this.sessionId) {
+            model["title"] = "Admin Console"
+            model["faculties"] = userRepository.findAllByDesignation("faculty").map { it.render() }
+            model["researchers"] = userRepository.findAllByDesignation("researcher").map { it.render() }
+            model["publications"] = publicationsRepository.findAll().mapIndexed { index, publication -> publication.render(index + 1) }
+            model["subscriptions"] = subscriptionRepository.findAll()
+            model["feedback"] = feedbackRepository.findAll()
+            "admin-console";
+        } else {
+            "admin-error";
+        }
+    }
 }
 
-private fun Publication.render(): PublicationHtmlRenderDto = PublicationHtmlRenderDto(
+private fun Publication.render(index: Int = 0): PublicationHtmlRenderDto = PublicationHtmlRenderDto(
+    index = index,
     title = this.title,
     url = this.url ?: defaultUrl(),
     journal = this.journal ?: defaultJournal(),

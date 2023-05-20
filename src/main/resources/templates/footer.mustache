@@ -29,7 +29,7 @@
 <!-- Footer End -->
 
 <!-- login Modal Start -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content login-page">
             <div class="modal-body">
@@ -38,21 +38,16 @@
                     <h4 class="text-uppercase text-primary"><b>Login</b></h4>
                 </div>
                 <div class="login-form mt-4">
-                    <form action="/api/user/" method="post">
+                    <form action="/api/user/login" method="post">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Username / Email</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                            <label for="exampleInputEmail1">Username</label>
+                            <input name="username" type="text" class="form-control" id="exampleInputEmail1"
                                    placeholder="Youremail@gmail.com">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
+                            <label for="exampleInputPassword">Username</label>
+                            <input name="password" type="text" class="form-control" id="exampleInputPassword"
                                    placeholder="Password">
-                        </div>
-                        <a href="#" class="float-end text-muted font-size-15">Forgot Password.?</a>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label font-size-15" for="customCheck1">Remember Me</label>
                         </div>
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary">Login <i class="icon-size-15 icon ms-1"
@@ -60,23 +55,6 @@
                             </button>
                         </div>
                     </form>
-                    <div class="position-relative text-center mt-4">
-                        <span class="login-border"></span>
-                        <p class="social-login text-muted font-size-17">Social Login</p>
-                    </div>
-                    <div class="text-center">
-                        <ul class="list-inline mt-2 mb-3">
-                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-primary"><i
-                                    class="icon-xs" data-feather="facebook"></i></a></li>
-                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-info"><i
-                                    class="icon-xs" data-feather="twitter"></i></a></li>
-                            <li class="list-inline-item me-3"><a href="#" class="login-social-icon icon-danger"><i
-                                    class="icon-xs" data-feather="instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="login-social-icon icon-success"><i
-                                    class="icon-xs" data-feather="linkedin"></i></a></li>
-                        </ul>
-                        <p class="text-muted mb-0">New User? <a href="#" class="text-primary">Signup</a></p>
-                    </div>
                 </div>
             </div>
         </div>

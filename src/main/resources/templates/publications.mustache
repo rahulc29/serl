@@ -1,42 +1,42 @@
 {{> header}}
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#publicationsModal">Add Publication</button>
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#publicationsModal">Add Publication</button>-->
 
-<div class="modal fade" id="publicationsModal" tabindex="-1" aria-labelledby="publicationsModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="publicationsModalLabel">New publication</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form method="post" action="/api/publications/">
-                    <div class="mb-3">
-                        <label for="authorUsername" class="col-form-label">Author Username:</label>
-                        <input type="text" class="form-control" id="authorUsername" name="authorUsername">
-                    </div>
-                    <div class="mb-3">
-                        <label for="title" class="col-form-label">Title : </label>
-                        <input type="text" name="title" class="form-control" id="title">
-                    </div>
-                    <div class="mb-3">
-                        <label for="url" class="col-form-label">Link : </label>
-                        <input type="text" name="url" class="form-control" id="url">
-                    </div>
-                    <div class="mb-3">
-                        <label for="journal" class="col-form-label">Journal : </label>
-                        <input type="text" name="journal" class="form-control" id="journal">
-                    </div>
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-primary">Submit <i class="icon-size-15 icon ms-1"
-                                                                                data-feather="arrow-right-circle"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal fade" id="publicationsModal" tabindex="-1" aria-labelledby="publicationsModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h1 class="modal-title fs-5" id="publicationsModalLabel">New publication</h1>-->
+<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <form method="post" action="/api/publications/">-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="authorUsername" class="col-form-label">Author Username:</label>-->
+<!--                        <input type="text" class="form-control" id="authorUsername" name="authorUsername">-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="title" class="col-form-label">Title : </label>-->
+<!--                        <input type="text" name="title" class="form-control" id="title">-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="url" class="col-form-label">Link : </label>-->
+<!--                        <input type="text" name="url" class="form-control" id="url">-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="journal" class="col-form-label">Journal : </label>-->
+<!--                        <input type="text" name="journal" class="form-control" id="journal">-->
+<!--                    </div>-->
+<!--                    <div class="text-center mt-4">-->
+<!--                        <button type="submit" class="btn btn-primary">Submit <i class="icon-size-15 icon ms-1"-->
+<!--                                                                                data-feather="arrow-right-circle"></i>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <section class="section bg-light" id="Publications">
     <div class="container">
@@ -49,27 +49,9 @@
         </div>
         <div class="row align-items-center">
             {{# publications}}
-                <div class="col-lg-4">
-                    <div class="pricing-box rounded text-center p-4">
-                        <h4 class="title mb-3">{{title}}</h4>
-                        <p class="text-muted font-weight-semibold">{{journal}}</p>
-                        <ul class="list-unstyled pricing-item mb-4">
-                            <li class="text-muted"><span style="font-weight: bold;">Link:</span> <br>
-                                <a href="{{url}}">{{url}}</a>
-                            </li>
-                            <li class="text-muted"><span style="font-weight: bold;">Author:</span>
-                                {{author.firstName}} {{author.lastName}} <br>
-                            </li>
-                            <li class="text-muted"><span style="font-weight: bold;">Author Username:</span>
-                                {{author.username}}</li>
-                        </ul>
-                        <div class="mt-4">
-                            <div class="hero-bottom-img">
-                                <img src="images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
-                            </div>
-                        </div>
+                    <div class="contentText">{{index}} <a href="/publications/{{author.username}}">{{author.firstName}} <b>{{author.lastName}}</b> </a><b> <a href="{{url}}">"{{title}}” </a> </b>
+                        has been accepted for publication in <b>{{journal}}</b> <br> <br>
                     </div>
-                </div>
             {{/publications}}
                 </div>
             </div>

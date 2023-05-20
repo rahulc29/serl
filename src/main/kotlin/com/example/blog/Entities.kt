@@ -94,7 +94,8 @@ data class PublicationHtmlRenderDto(
     val title: String,
     val journal: String,
     val url: String,
-    val author: AuthorHtmlRenderDto
+    val author: AuthorHtmlRenderDto,
+    val index: Int
 )
 
 data class AuthorHtmlRenderDto (
@@ -136,7 +137,6 @@ data class UserHttpPostRequestDto(
     var firstName: String,
     var lastName: String,
     var designation: String,
-    var apiKey: String,
     var publications: List<Long> = emptyList(),
     var address: String? = null,
     var description: String? = null,
